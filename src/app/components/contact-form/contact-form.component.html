@@ -1,0 +1,61 @@
+<mat-card class="card-form">
+    <mat-card-title align="center">{{edit ? 'Editar Contacto' : 'Añadir Nuevo Contacto'}}</mat-card-title>
+    <form class="form-contact">
+
+        <table class="example-full-width" cellspacing="0">
+            <tr>
+                <td>
+                    <mat-form-field class="example-full-width" appearance="fill">
+                        <mat-label>Nombre completo</mat-label>
+                        <mat-icon matPrefix>person</mat-icon>
+                        <input matInput [(ngModel)]="contacto.nombre" name="nombre">
+                    </mat-form-field>
+                </td>
+                <td>
+
+                    <mat-form-field class="example-full-width" appearance="fill">
+                        <mat-label>Teléfono</mat-label>
+                        <mat-icon matPrefix>phone</mat-icon>
+
+                        <input matInput [(ngModel)]="contacto.telefono" name="telefono">
+                    </mat-form-field>
+                </td>
+            </tr>
+        </table>
+
+
+        <table class="example-full-width" cellspacing="0">
+            <tr>
+                <td>
+                    <mat-form-field class="example-full-width" appearance="fill">
+                        <mat-label>Correo</mat-label>
+                        <mat-icon matPrefix>email</mat-icon>
+
+                        <input matInput [(ngModel)]="contacto.correo" name="correo">
+                    </mat-form-field>
+                </td>
+                <td>
+                    <mat-form-field class="example-full-width" appearance="fill">
+                        <mat-label>Edad</mat-label>
+                        <input type="number" matInput [(ngModel)]="contacto.edad" name="edad">
+                    </mat-form-field>
+                </td>
+
+            </tr>
+        </table>
+
+        <mat-form-field appearance="fill">
+            <mat-label>Estatus</mat-label>
+            <mat-icon matPrefix>circle</mat-icon>
+            <mat-select [(ngModel)]="contacto.activo" name="activo">
+                <mat-option *ngFor="let food of foods" [value]="food.value">
+                    {{food.viewValue}}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+    </form>
+    <mat-card-actions align="end">
+        <button mat-button class="btn-send" (click)="edit ? updateContact() : saveNewContact()">{{edit ? 'Guardar' : 'Añadir'}} </button>
+
+    </mat-card-actions>
+</mat-card>

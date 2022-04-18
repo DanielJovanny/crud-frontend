@@ -1,0 +1,33 @@
+table {
+    width: 100%;
+}
+
+.active-contact {
+    color: #1ABC9C;
+}
+
+.inactive-contact {
+    color: #E74C3C;
+}
+
+.name-colum {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.name-colum>mat-icon {
+    padding-right: .25rem;
+}
+
+.edit-btn {
+    background-color: #1ABC9C;
+    color: #fff;
+    margin-right: .5rem;
+}
+
+.delete-btn {
+    background-color: #E74C3C;
+    color: #fff;
+}

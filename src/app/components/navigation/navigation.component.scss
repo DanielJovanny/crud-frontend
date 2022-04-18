@@ -1,0 +1,28 @@
+.logo {
+    margin-top: 1.5rem;
+}
+
+.title-dashboard {
+    margin: 1rem auto;
+    margin-top: .25rem;
+    font-weight: 700;
+}
+
+mat-divider {
+    margin-bottom: 1rem;
+}
+
+.menu-button {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 1rem;
+    mat-icon {
+        margin-right: 8px;
+    }
+}
+
+.menu-button.active {
+    background: #efefef;
+}
