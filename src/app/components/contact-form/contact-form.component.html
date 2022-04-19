@@ -8,7 +8,7 @@
                     <mat-form-field class="example-full-width" appearance="fill">
                         <mat-label>Nombre completo</mat-label>
                         <mat-icon matPrefix>person</mat-icon>
-                        <input matInput [(ngModel)]="contacto.nombre" name="nombre">
+                        <input matInput [(ngModel)]="contacto.nombre" name="nombre" required>
                     </mat-form-field>
                 </td>
                 <td>
@@ -17,7 +17,7 @@
                         <mat-label>Teléfono</mat-label>
                         <mat-icon matPrefix>phone</mat-icon>
 
-                        <input matInput [(ngModel)]="contacto.telefono" name="telefono">
+                        <input matInput [(ngModel)]="contacto.telefono" name="telefono" required>
                     </mat-form-field>
                 </td>
             </tr>
@@ -31,13 +31,13 @@
                         <mat-label>Correo</mat-label>
                         <mat-icon matPrefix>email</mat-icon>
 
-                        <input matInput [(ngModel)]="contacto.correo" name="correo">
+                        <input matInput [(ngModel)]="contacto.correo" name="correo" required>
                     </mat-form-field>
                 </td>
                 <td>
                     <mat-form-field class="example-full-width" appearance="fill">
                         <mat-label>Edad</mat-label>
-                        <input type="number" matInput [(ngModel)]="contacto.edad" name="edad">
+                        <input type="number" matInput [(ngModel)]="contacto.edad" name="edad" required>
                     </mat-form-field>
                 </td>
 
@@ -55,6 +55,7 @@
         </mat-form-field>
     </form>
     <mat-card-actions align="end">
+        <button mat-button [routerLink]="['/list']">Cancelar</button>
         <button mat-button class="btn-send" (click)="edit ? updateContact() : saveNewContact()">{{edit ? 'Guardar' : 'Añadir'}} </button>
 
     </mat-card-actions>

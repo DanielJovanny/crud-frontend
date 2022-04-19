@@ -39,7 +39,7 @@ import { ConfirmDialogComponent } from './components/confirm-dialog/confirm-dial
   imports: [
     FormsModule,
     ReactiveFormsModule,
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     AppRoutingModule,
     BrowserAnimationsModule,
     MatSliderModule,
